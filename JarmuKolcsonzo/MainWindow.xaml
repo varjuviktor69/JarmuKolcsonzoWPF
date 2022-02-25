@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:JarmuKolcsonzo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="MenuItem">
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+    </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="85" MinWidth="5" MaxWidth="85"/>
@@ -14,7 +19,13 @@
         </Grid.ColumnDefinitions>
 
         <Menu Grid.Column="0">
-            <MenuItem></MenuItem>
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="Járművek"/>
+            <MenuItem Header="Ügyfelek"/>
         </Menu>
         <GridSplitter Grid.Column="1"
                       Background="Black"
