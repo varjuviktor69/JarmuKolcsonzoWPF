@@ -3,10 +3,12 @@
                     xmlns:vm="clr-namespace:JarmuKolcsonzo.ViewModels"
                     xmlns:views="clr-namespace:JarmuKolcsonzo.Views"
                     >
+    
     <DataTemplate DataType="{x:Type vm:JarmuViewModel}">
         <views:JarmuView/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:UgyfelViewModel}">
         <views:UgyfelView/>
     </DataTemplate>
+    
 </ResourceDictionary>
